@@ -70,7 +70,6 @@ def get_words(filename):
     :param filename: (string) Name of the file containing song lyrics
     :return: (list of strings) list of words in lowercase
     """
-    lyrics = []
     with open(filename, "r") as f:
         text = f.read()
         lyrics = [word.strip(string.punctuation).lower() for word in
