@@ -111,11 +111,12 @@ def common_words(words1, words2):
     :param words2: (list of stings)
     :return: None
     """
-    common_set = set((word for word in words1 if len(word) >= 4)) & set((
-                      word for word in words2 if len(word) >= 4))
+    common_set = ({word for word in words1 if len(word) >= 4} &
+                  {word for word in words2 if len(word) >= 4})
     print('The words (4-letter or longer) that appear in both songs:')
     for word in sorted(common_set):
         print(word)
+    return None
 
 
 def main():
