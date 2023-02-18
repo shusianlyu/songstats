@@ -97,8 +97,8 @@ def get_stats(words):
     print(f'There are {len(words)} words in total in the song.')
     print(f'There are {len(word_dict)} distinct words in the song.')
     most_common(word_dict)
-    word_list = sorted(word_dict, key=lambda word: len(word), reverse=True)
-    print(f'The longest word in the song is: {word_list[0]}.')
+    print(f'The longest word in the song is: '
+          f'{max(word_dict.keys(), key=len)}.')
     repeats(word_dict)
     print('-------------------------------------------------------------------'
           '-------------')
