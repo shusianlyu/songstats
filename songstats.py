@@ -115,9 +115,8 @@ def common_words(words1, words2):
     """
     common_set = set((word for word in words1 if len(word) >= 4)) & set((
                       word for word in words2 if len(word) >= 4))
-    common_list = sorted(list(common_set))
     print('The words (4-letter or longer) that appear in both songs:')
-    for word in common_list:
+    for word in sorted(common_set):
         print(word)
 
 
