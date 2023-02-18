@@ -137,7 +137,7 @@ def main():
         filenames.append(filename)
         lyric_list.append(get_words(filename))
     for lyrics in range(2):
-        print(f'Song Statistics: {filename}')
+        print(f'Song Statistics: {filenames[lyrics]}')
         get_stats(lyric_list[lyrics])
     common_words(lyric_list[0], lyric_list[1])
 
