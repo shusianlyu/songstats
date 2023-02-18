@@ -54,9 +54,8 @@ def repeats(word_count):
     :param word_count: dictionary with items of the form letter: count
     :return: None
     """
-    repeat_dict = {word: word_count[word] for word in word_count if
-                   len(word) >= 4 and word_count[word] > 3}
-    repeat_list = sorted(repeat_dict)
+    repeat_list = sorted({word: word_count[word] for word in word_count if
+                          len(word) >= 4 and word_count[word] > 3})
     print('The following (4-letter or longer) words appear more than 3 times:')
     for word in repeat_list:
         print(f'  {word}')
