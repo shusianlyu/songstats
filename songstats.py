@@ -41,8 +41,8 @@ def most_common(word_count):
     """
     word_list = sorted(word_count, key=word_count.get, reverse=True)
     print('The 8 most common words are:')
-    for word in range(8):
-        print(f'  {word_list[word]}: appears {word_count.get(word_list[word])}'
+    for word in word_list[:8]:
+        print(f'  {word}: appears {word_count.get(word)}'
               f' times.')
     return None
 
